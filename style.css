@@ -1,0 +1,54 @@
+body {
+    background: #181c24;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+h1, h2 {
+    margin-left: 20px;
+}
+.section {
+    margin: 30px;
+    padding: 20px;
+    background: #23283b;
+    border-radius: 12px;
+}
+.assignments {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+.assignments a {
+    display: block;
+    background: #22263a;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background 0.2s;
+}
+.assignments a:hover {
+    background: #2e3450;
+}
+
+/* Directional marker for all links (adds a right arrow and small hover movement) */
+a {
+    color: inherit; /* keep existing color */
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: "\2192"; /* Unicode right arrow */
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    opacity: 0.9;
+}
+
+a:hover::after {
+    transform: translateX(4px);
+    opacity: 1;
+}
